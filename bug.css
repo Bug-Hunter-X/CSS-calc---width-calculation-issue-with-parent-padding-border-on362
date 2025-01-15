@@ -1,0 +1,1 @@
+The CSS rule `.selector { width: calc(100% - 20px); }` might unexpectedly result in a smaller width than expected if the parent element has padding or border. This is because `calc()` calculates the width based on the element's content area, not the total area including padding and border.
