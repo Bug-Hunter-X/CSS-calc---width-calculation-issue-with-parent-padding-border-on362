@@ -1,0 +1,15 @@
+To fix the issue, set the `box-sizing` property to `border-box` on the parent element. This makes the padding and border included in the element's total width, so `calc()` will work as expected.  Here's the corrected code:
+
+```css
+.parent {
+  box-sizing: border-box;
+  padding: 10px;
+  border: 5px solid #ccc;
+}
+
+.selector {
+  width: calc(100% - 20px);
+}
+```
+
+By setting `box-sizing: border-box;`, the `calc(100% - 20px)` will now correctly account for the padding and border of the parent element.
